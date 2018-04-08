@@ -4,8 +4,11 @@
 #SBATCH -p short
 #SBATCH --reservation=cbmucl
 
-# Load modules to run python
-module load miniconda/python2
+# Load modules
+module load eb
+module load Miniconda2
+
+source deactivate
 
 # Activate QIIME1 virtual environment
 echo "loading virtualenv"
@@ -24,3 +27,18 @@ time split_libraries_fastq.py \
 -q 19 \
 
 
+time split_libraries_fastq.py \
+-m ~/18/map_corrected.tsv \
+-i ~/18/Read1.fastq.gz \
+-b ~/18/Index.fastq.gz \
+-o ~/18/split_data/ \
+-q 19 \
+--barcode_type 12
+
+time split_libraries_fastq.py \
+-m ~/2018_02_smb/map_incomplete.tsv \
+-i ~/2018_02_smb/Read1.fastq.gz \
+-b ~/2018_02_smb/Index.fastq.gz \
+-o ~/2018_02_smb \
+-q 19 \
+—barcode_type 12
