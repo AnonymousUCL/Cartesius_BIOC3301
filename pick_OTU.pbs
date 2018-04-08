@@ -14,16 +14,17 @@ source deactivate
 echo "loading virtualenv"
 source activate qiime1
 
-# Setting temporary directory
+# Set temporary directory
 export TMPDIR=~/qiime_tmp
 
-# picking OTUs
+# Pick OTUs
 echo "Picking OTUs with closed reference"
 time pick_closed_reference_otus.py \
--i ~///seqs.fna \
--o ~//otus \
+-i ~/2018/seqs.fna \
+-o ~/2018/otus \
 -a \
--O 16
+-O 8
 
 # Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
 source deactivate
