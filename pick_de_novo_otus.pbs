@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+#SBATCH --reservation=cbmucl
+
+# Load modules to run python
+module load eb
+module load Miniconda2
+
+source deactivate
+
+# Activate QIIME1 virtual environment
+echo "Loading qiime1 virtual environment"
+source activate qiime1
+
+# Set temporary directory
+export TMPDIR=~/qiime_tmp
+
+# Pick de novo OTUs
+echo "Picking de novo OTUs"
+time pick_de_novo_otus.py \
+-i ~/2018/seqs.fna \
+-o ~/2018/de_novo_otus \
+-a \
+-O 2
+
+# Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
+source deactivate
