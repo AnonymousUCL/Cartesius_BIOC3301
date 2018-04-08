@@ -17,6 +17,7 @@ source activate qiime1
 # Setting temporary directory
 export TMPDIR=~/qiime_tmp
 
+
 # Demultiplex and quality filter
 time split_libraries_fastq.py \
 -m ~/2018/map.tsv \
