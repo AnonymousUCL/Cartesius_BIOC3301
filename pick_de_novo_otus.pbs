@@ -17,6 +17,7 @@ source activate qiime1
 # Set temporary directory
 export TMPDIR=~/qiime_tmp
 
+
 # Pick de novo OTUs
 echo "Picking de novo OTUs"
 time pick_de_novo_otus.py \
@@ -24,6 +25,7 @@ time pick_de_novo_otus.py \
 -o ~/2018/de_novo_otus \
 -a \
 -O 2
+
 
 # Deactivate QIIME1 virtual environment
 echo "Deactivating qiime1 virtual environment"
