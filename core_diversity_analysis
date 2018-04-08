@@ -1,0 +1,34 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+#SBATCH --reservation=cbmucl
+
+# Load modules
+module load eb
+module load Miniconda2
+
+source deactivate
+
+# Activate QIIME1 virtual environment
+echo "loading virtualenv"
+source activate qiime1
+
+# Set temporary directory
+export TMPDIR=~/qiime_tmp
+
+
+# Core diversity analyses
+time core_diversity_analyses.py \
+-i ~/2018/de_novo_otus/otu_table.biom \
+-m ~/2018/map.tsv \
+-t ~/2018/de_novo_otus/rep_set.tre \
+-o ~/2018/core_diversity_analyses \
+-e 600 \
+-a \
+-O 24
+
+
+# Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
+source deactivate
