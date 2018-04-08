@@ -17,6 +17,7 @@ source activate qiime1
 # Set temporary directory
 export TMPDIR=~/qiime_tmp
 
+
 # Join paired ends
 echo “Joining paired ends”
 time join_paired_ends.py \
@@ -25,6 +26,7 @@ time join_paired_ends.py \
 -f ~/2018/Read1.fastq.gz \
 -r ~/2018/Read2.fastq.gz \
 -o ~/2018/SeqPrep_joined
+
 
 # Deactivate QIIME1 virtual environment
 echo "Deactivating qiime1 virtual environment"
