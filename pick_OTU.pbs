@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+#SBATCH --reservation=cbmucl
+
+# Load modules
+module load eb
+module load Miniconda2
+
+source deactivate
+
+# Activate QIIME1 virtual environment
+echo "loading virtualenv"
+source activate qiime1
+
+# Setting temporary directory
+export TMPDIR=~/qiime_tmp
+
+# picking OTUs
+echo "Picking OTUs with closed reference"
+time pick_closed_reference_otus.py \
+-i ~///seqs.fna \
+-o ~//otus \
+-a \
+-O 16
+
+# Deactivate QIIME1 virtual environment
+source deactivate
