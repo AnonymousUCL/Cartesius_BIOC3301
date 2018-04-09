@@ -26,3 +26,7 @@ time split_libraries_fastq.py \
 -o ~/2018/split_data/ \
 -q 19 \
 --barcode_type 12
+
+# Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
+source deactivate
