@@ -19,8 +19,8 @@ export TMPDIR=~/qiime_tmp
 
 # Compute core microbiome
 compute_core_microbiome.py \
--i ~/2018/de_novo_otus/otu_table.biom \
--o ~/2018/core_microbiome
+-i ~/2018_02_smb/de_novo_otus/otu_table.biom \
+-o ~/2018_02_smb/core_microbiome
 
 
 # Deactivate QIIME1 virtual environment
