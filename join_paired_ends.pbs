@@ -21,10 +21,10 @@ export TMPDIR=~/qiime_tmp
 echo “Joining paired ends”
 time join_paired_ends.py \
 -m SeqPrep \
--b ~/2018/Index.fastq.gz \
--f ~/2018/Read1.fastq.gz \
--r ~/2018/Read2.fastq.gz \
--o ~/2018/SeqPrep_joined
+-b ~/2018_02_smb/Index.fastq.gz \
+-f ~/2018_02_smb/Read1.fastq.gz \
+-r ~/2018_02_smb/Read2.fastq.gz \
+-o ~/2018_02_smb/SeqPrep_joined
 
 
 # Deactivate QIIME1 virtual environment
