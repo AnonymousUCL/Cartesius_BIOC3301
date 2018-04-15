@@ -19,7 +19,7 @@ export TMPDIR=~/qiime_tmp
 
 # Demultiplex and quality filter
 time split_libraries_fastq.py \
--m ~/2018_02_smb/map.tsv \
+-m ~/2018_02_smb/map_incomplete.tsv \
 -i ~/2018_02_smb/SeqPrep_joined/seqprep_assembled.fastq.gz \
 -b ~/2018_02_smb/SeqPrep_joined/seqprep_assembled.fastq_barcodes.fastq \
 -o ~/2018_02_smb/split_data/ \
