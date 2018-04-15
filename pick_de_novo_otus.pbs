@@ -20,10 +20,10 @@ export TMPDIR=~/qiime_tmp
 # Pick de novo OTUs
 echo "Picking de novo OTUs"
 time pick_de_novo_otus.py \
--i ~/2018_02_smb/seqs.fna \
+-i ~/2018_02_smb/split_data/seqs.fna \
 -o ~/2018_02_smb/de_novo_otus \
 -a \
--O 2
+-O 24
 
 
 # Deactivate QIIME1 virtual environment
