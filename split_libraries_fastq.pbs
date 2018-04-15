@@ -19,10 +19,10 @@ export TMPDIR=~/qiime_tmp
 
 # Demultiplex and quality filter
 time split_libraries_fastq.py \
--m ~/2018/map.tsv \
--i ~/2018/read1.fastq.gz \
--b ~/2018/index.fastq.gz \
--o ~/2018/split_data/ \
+-m ~/2018_02_smb/map.tsv \
+-i ~/2018_02_smb/read1.fastq.gz \
+-b ~/2018_02_smb/index.fastq.gz \
+-o ~/2018_02_smb/split_data/ \
 -q 19 \
 --barcode_type 12
 
