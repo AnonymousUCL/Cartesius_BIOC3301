@@ -19,10 +19,10 @@ export TMPDIR=~/qiime_tmp
 
 # Core diversity analyses
 time core_diversity_analyses.py \
--i ~/2018/de_novo_otus/otu_table.biom \
--m ~/2018/map.tsv \
--t ~/2018/de_novo_otus/rep_set.tre \
--o ~/2018/core_diversity_analyses \
+-i ~/2018_02_smb/de_novo_otus/otu_table.biom \
+-m ~/2018_02_smb/map.tsv \
+-t ~/2018_02_smb/de_novo_otus/rep_set.tre \
+-o ~/2018_02_smb/core_diversity_analyses \
 -e 600 \
 -a \
 -O 24
