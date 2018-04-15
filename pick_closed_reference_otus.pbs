@@ -20,10 +20,10 @@ export TMPDIR=~/qiime_tmp
 # Pick OTUs
 echo "Picking OTUs with closed reference"
 time pick_closed_reference_otus.py \
--i ~/2018_02_smb/seqs.fna \
--o ~/2018_02_smb/otus \
+-i ~/2018_02_smb/split_data/seqs.fna \
+-o ~/2018_02_smb/closed_otus \
 -a \
--O 8
+-O 24
 
 
 # Deactivate QIIME1 virtual environment
