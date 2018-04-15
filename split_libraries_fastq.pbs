@@ -20,11 +20,11 @@ export TMPDIR=~/qiime_tmp
 # Demultiplex and quality filter
 time split_libraries_fastq.py \
 -m ~/2018_02_smb/map.tsv \
--i ~/2018_02_smb/read1.fastq.gz \
--b ~/2018_02_smb/index.fastq.gz \
+-i ~/2018_02_smb/SeqPrep_joined/seqprep_assembled.fastq.gz \
+-b ~/2018_02_smb/SeqPrep_joined/seqprep_assembled.fastq_barcodes.fastq \
 -o ~/2018_02_smb/split_data/ \
 -q 19 \
---barcode_type 12
+--rev_comp_barcode --rev_comp_mapping_barcodes
 
 # Deactivate QIIME1 virtual environment
 echo "Deactivating qiime1 virtual environment"
