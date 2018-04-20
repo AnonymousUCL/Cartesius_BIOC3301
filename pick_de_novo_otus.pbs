@@ -1,16 +1,16 @@
 #!/bin/bash
-#SBATCH -t 5:00:00
+#SBATCH -t 1:00:00
 #SBATCH -n 24
-#SBATCH -p normal
+#SBATCH -p short
 
-# Load modules to run python
+# Load modules
 module load eb
 module load Miniconda2
 
 source deactivate
 
 # Activate QIIME1 virtual environment
-echo "Loading qiime1 virtual environment"
+echo "loading virtualenv"
 source activate qiime1
 
 # Set temporary directory
