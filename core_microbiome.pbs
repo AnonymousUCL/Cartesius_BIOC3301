@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+# Load modules
+module load eb
+module load Miniconda2
+
+source deactivate
+
+# Activate QIIME1 virtual environment
+echo "loading virtualenv"
+source activate qiime1
+
+# Set temporary directory
+export TMPDIR=~/qiime_tmp
+
+# Core microbiome
+time compute_core_microbiome.py \
+-i ~/2018_02_smb/closed_otus/otu_table.biom \
+-o ~/2018_02_smb/core_microbiome
+
+# Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
+source deactivate
