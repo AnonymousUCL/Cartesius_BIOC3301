@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -t 1:00:00
+#SBATCH -n 24
+#SBATCH -p short
+
+# Load modules
+module load eb
+module load Miniconda2
+
+source deactivate
+
+# Activate QIIME1 virtual environment
+echo "loading virtualenv"
+source activate qiime1
+
+# Set temporary directory
+export TMPDIR=~/qiime_tmp
+
+#Group sig pH
+time group_significance.py \
+-i ~/2018_02_smb/core_microbiome/core_table_100.biom \
+-m ~/2018_02_smb/map.tsv \
+-c SamplePotassium \
+-o ~/g_sig_k \
+-s kruskal_wallis \
+--permutations 765
+
+# Deactivate QIIME1 virtual environment
+echo "Deactivating qiime1 virtual environment"
+source deactivate
