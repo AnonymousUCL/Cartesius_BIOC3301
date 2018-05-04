@@ -23,7 +23,7 @@ time group_significance.py \
 -c SamplePotassium \
 -o ~/g_sig_k \
 -s kruskal_wallis \
---permutations 765
+--permutations 605
 
 # Deactivate QIIME1 virtual environment
 echo "Deactivating qiime1 virtual environment"
