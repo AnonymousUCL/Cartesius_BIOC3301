@@ -22,7 +22,7 @@ time make_otu_heatmap.py \
 -i ~/2018_02_smb/core_microbiome/core_table_100.biom \
 -o ~/HeatMap \
 -m ~/2018_02_smb/map.tsv \
--t ~/2018_02_smb/deNovo/rep_set.tre
+-t ~/2018_02_smb/closed_otus/97_otus.tree
 
 
 # Deactivate QIIME1 virtual environment
