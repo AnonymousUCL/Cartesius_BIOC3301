@@ -11,6 +11,7 @@ source deactivate
 
 # Activate QIIME1 virtual environment
 echo "loading virtualenv"
+module load R
 source activate qiime1
 
 # Set temporary directory
