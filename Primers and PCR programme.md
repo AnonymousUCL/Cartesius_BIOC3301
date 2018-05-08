@@ -1,5 +1,7 @@
 # Primers and PCR programme
 
+Primers and PCR programme provided by BIOC3301 Course Organiser Dr Michael Baron, and are based on
+
 515fB PCR Primer Sequence – Forward primer, barcoded
 >1. 5’ Illumina adapter
 >2. GoLay barcode
