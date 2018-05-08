@@ -10,10 +10,10 @@ Repository of Bash command line batch scripts for the metagenomic analysis of so
     Joining paired ends was not possible in previous years. A demonstration of the improved quality of data produced.
 
 2.  split_libraries_fastq.pbs
-    > Demultiplexes Fastq sequence data
+    > Demultiplexes Fastq sequence data.
 
 3.  pick_closed_reference_otus.pbs
-    > Produces an OTU table to be used for core diversity analysis and core microbiome
+    > Produces an OTU table to be used for core diversity analysis and core microbiome.
     Closed OTUs were selected as cartesius had issues running denovo and open otu scripts.
 
 4.  closed_core_diversity_analysis.pbs
@@ -25,7 +25,7 @@ Repository of Bash command line batch scripts for the metagenomic analysis of so
     > Used for group significance statistical tests.
 
 6.  heatmap.pbs
-
+    > A visualisation script used to produce a heatmap, which illustrates beta diversity - the relative abundance of OTUss.
     Used to produce fig.2
 
 At this point processed data was reviewed, it was decided samples 12, 20, and 30 would be excluded from the map file. The map file and scripts were revised with new output directoriesto reflect this second iteration. Scripts were edited directly in the Git Bash terminal using the vim text editor. At this point the second analysis iteration was carried out.
