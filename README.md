@@ -45,7 +45,8 @@ At this point processed data was reviewed, it was decided samples 12, 20, and 30
 5.  core_microbiome.pbs
 
 6.  compare_categories_pH.pbs
-
+    > A statistical test to determine significant variation within a category.
+    
     Used to produce fig.7
     
     compare_categories_P.pbs
@@ -61,6 +62,7 @@ At this point processed data was reviewed, it was decided samples 12, 20, and 30
     Used to produce fig.7
     
 7.  groupsig_ph.pbs
+    >A statistical test looking for species enriched under specific a metadata category value.
 
     Used to produce fig.6
     
