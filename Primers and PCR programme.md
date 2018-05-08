@@ -1,6 +1,8 @@
 # Primers and PCR programme
 
-Primers and PCR programme provided by BIOC3301 Course Organiser Dr Michael Baron, and are based on
+Primers and PCR programme provided by BIOC3301 Course Organiser Dr Michael Baron, and are based on the following paper:
+
+>Caporaso JG, Lauber CL, Walters WA, Berg-Lyons D, Huntley J, Fierer N, et al. Ultra-high-throughput microbial community analysis on the Illumina HiSeq and MiSeq platforms. ISME J. 2012;6(8):1621–4. 
 
 515fB PCR Primer Sequence – Forward primer, barcoded
 >1. 5’ Illumina adapter
